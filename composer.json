@@ -1,18 +1,21 @@
 {
     "name": "lzxyz/validator",
+    "type": "library",
     "description": "this is validator",
+    "keywords": ["validator","idcard"],
+    "homepage": "https://github.com/lzxyz/validator",
     "authors": [
         {
             "name": "DIY",
             "email": "394028924@qq.com"
         }
     ],
-  "require": {
-    "php": ">=5.3.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "LzXyz\\Validator\\": "src"
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+             "LzXyz\\Validator\\": "src"
+        }
     }
-  }
 }
