@@ -24,6 +24,11 @@ class Validator
         }
     }
 
+    /**
+     * 邮箱验证
+     * @param $mail
+     * @return bool
+     */
     public static function mail($mail){
         $rex = '/^(\w{1,25})@(\w{1,16})(\.(\w{1,4})){1,3}$/';
         if(preg_match($rex,$mail)){
@@ -90,7 +95,7 @@ class Validator
     /**
      * 匹配中文
      * @param $str
-     * @param int $len
+     * @return bool
      */
     public static function zhCN($str){
         $rex = '/^[\u4e00-\u9fa5]+$/';
@@ -116,11 +121,19 @@ class Validator
         }
     }
 
-    public static function dateFormat(){
-
+    /**
+     * 日期格式验证
+     * @param $date
+     * @param string $format
+     * @return bool
+     */
+    public static function dateTime($date, $format = 'Y-m-d'){
+        if(date_create_from_format($format,$date)){
+            return true;
+        }else{
+            return false;
+        }
     }
-
-    public static function dateTimeFormat(){}
 
 
 
